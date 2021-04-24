@@ -17,6 +17,8 @@ public class NewBehaviourScript : MonoBehaviour
     bool part3 = false;
     bool part4 = false;
     bool part5 = false;
+    bool part6 = false;
+    bool part7 = false;
 
     void Update()
     {
@@ -38,7 +40,6 @@ public class NewBehaviourScript : MonoBehaviour
                 transform.position += new Vector3(0, 1 * Time.deltaTime, 0);
             } else
             {
-                part1 = false;
                 part2 = true;
             }
         }
@@ -47,27 +48,61 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if (transform.position.x < -2.33 & part3 == false)
             {
-                transform.position += new Vector3(1 * Time.deltaTime, 0, 0);
+                transform.position += new Vector3(1 * Time.deltaTime, 0.05f *Time.deltaTime, 0);
             }
             else
             {
-                part2 = false;
                 part3 = true;
             }
         }
 
-        if (part1 == true)
+        if (part3 == true)
         {
-            if (transform.position.y < 3.65 & part2 == false)
+            if (transform.position.y > -1.68 & part4 == false)
             {
-                transform.position += new Vector3(0, 1 * Time.deltaTime, 0);
+                transform.position += new Vector3(-0.1f * Time.deltaTime, -1 * Time.deltaTime, 0);
             }
             else
             {
-                part1 = false;
-                part2 = true;
+                part4 = true;
             }
         }
+
+        if (part4 == true)
+        {
+            if (transform.position.x < -0.49 & part5 == false)
+            {
+                transform.position += new Vector3(1 * Time.deltaTime, 0.05f * Time.deltaTime, 0);
+            }
+            else
+            {
+                part5 = true;
+            }
+        }
+
+        if (part5 == true)
+        {
+            if (transform.position.y < 0.88 & part6 == false)
+            {
+                transform.position += new Vector3(0.3f * Time.deltaTime, 1 * Time.deltaTime, 0);
+            }
+            else
+            {
+                part6 = true;
+            }
+        }
+        if (part6 == true)
+        {
+            if (transform.position.x < 3.48 & part7 == false)
+            {
+                transform.position += new Vector3(1 * Time.deltaTime, 0.1f * Time.deltaTime, 0);
+            }
+            else
+            {
+                part7 = true;
+            }
+        }
+
 
     }
 }
