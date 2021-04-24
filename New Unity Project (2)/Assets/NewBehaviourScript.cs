@@ -20,6 +20,10 @@ public class NewBehaviourScript : MonoBehaviour
     bool part5 = false;
     bool part6 = false;
     bool part7 = false;
+    bool part8 = false;
+    bool part9 = false;
+    bool part10 = false;
+    bool part11 = false;
 
     void Update()
     {
@@ -79,9 +83,8 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if (transform.position.x < -0.49 & part5 == false)
             {
-                transform.position += new Vector3(1 * Time.deltaTime, 0.05f * Time.deltaTime, 0);
+                transform.position += new Vector3(1 * Time.deltaTime, 0, 0);
                 distanceTraveled += 1 * Time.deltaTime;
-                distanceTraveled += 0.05f * Time.deltaTime;
             }
             else
             {
@@ -93,9 +96,9 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if (transform.position.y < 0.88 & part6 == false)
             {
-                transform.position += new Vector3(0.3f * Time.deltaTime, 1 * Time.deltaTime, 0);
+                transform.position += new Vector3(0.4f * Time.deltaTime, 1 * Time.deltaTime, 0);
                 distanceTraveled += 1 * Time.deltaTime;
-                distanceTraveled += 0.3f * Time.deltaTime;
+                distanceTraveled += 0.4f * Time.deltaTime;
             }
             else
             {
@@ -104,7 +107,7 @@ public class NewBehaviourScript : MonoBehaviour
         }
         if (part6 == true)
         {
-            if (transform.position.x < 3.48 & part7 == false)
+            if (transform.position.x < 3.55 & part7 == false)
             {
                 transform.position += new Vector3(1 * Time.deltaTime, 0.1f * Time.deltaTime, 0);
                 distanceTraveled += 1 * Time.deltaTime;
@@ -115,6 +118,59 @@ public class NewBehaviourScript : MonoBehaviour
                 part7 = true;
             }
         }
+        if (part7 == true)
+        {
+            if (transform.position.y < 3.24 & part8 == false)
+            {
+                transform.position += new Vector3(-0.1f * Time.deltaTime, 1 * Time.deltaTime, 0);
+                distanceTraveled += 1 * Time.deltaTime;
+                distanceTraveled += 0.1f * Time.deltaTime;
+            }
+            else
+            {
+                part8 = true;
+            }
+        }
+        if (part8 == true)
+        {
+            if (transform.position.x < 6.35 & part9 == false)
+            {
+                transform.position += new Vector3(1 * Time.deltaTime, 0.1f * Time.deltaTime, 0);
+                distanceTraveled += 1 * Time.deltaTime;
+                distanceTraveled += 0.1f * Time.deltaTime;
+            }
+            else
+            {
+                part9 = true;
+            }
+        }
+        if (part9 == true)
+        {
+            if (transform.position.y > 0.68 & part10 == false)
+            {
+                transform.position += new Vector3(0.07f * Time.deltaTime, -1 * Time.deltaTime, 0);
+                distanceTraveled += 1 * Time.deltaTime;
+                distanceTraveled += 0.07f * Time.deltaTime;
+            }
+            else
+            {
+                part10 = true;
+            }
+        }
+        if (part10 == true)
+        {
+            if (transform.position.x < 7.78 & part11 == false)
+            {
+                transform.position += new Vector3(1 * Time.deltaTime, 0, 0);
+                distanceTraveled += 1 * Time.deltaTime;
+            }
+            else
+            {
+                part11 = true;
+            }
+        }
+
+
 
 
     }
