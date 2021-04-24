@@ -10,7 +10,7 @@ public class orangeEnemy : MonoBehaviour
         // It is also possible to set the position with a Vector2
         // This automatically sets the Z axis to 0
     }
-    int health = 2;
+    public int health = 2;
     float speed = 1.5f;
 
     public float distanceTraveled = 0;
