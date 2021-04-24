@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class redEnemy : MonoBehaviour
 {
+
+    public int health = 1;
+    int speed = 1;
     // Start is called before the first frame update
     void Start()
     {
-        // It is also possible to set the position with a Vector2
-        // This automatically sets the Z axis to 0
+        health = 1;
     }
-    public int health = 1;
-    int speed = 1;
-
     public float distanceTraveled = 0;
     bool part1 = false;
     bool part2 = false;

@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class orangeEnemy : MonoBehaviour
 {
+
+    public int health = 2;
+    float speed = 1.5f;
     // Start is called before the first frame update
     void Start()
     {
-        // It is also possible to set the position with a Vector2
-        // This automatically sets the Z axis to 0
+        health = 2;
     }
-    public int health = 2;
-    float speed = 1.5f;
-
     public float distanceTraveled = 0;
     bool part1 = false;
     bool part2 = false;
