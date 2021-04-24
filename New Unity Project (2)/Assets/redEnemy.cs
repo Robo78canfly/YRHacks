@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class redEnemy : MonoBehaviour
 {
-    [SerializedField] public int health = 1;
     // Start is called before the first frame update
     void Start()
     {
         // It is also possible to set the position with a Vector2
         // This automatically sets the Z axis to 0
     }
-    
+    int health = 1;
 
     public float distanceTraveled = 0;
     bool part1 = false;
