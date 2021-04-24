@@ -12,6 +12,7 @@ public class NewBehaviourScript : MonoBehaviour
         transform.position = new Vector2(-8.5f, 0.75f);
         
     }
+    public float distanceTraveled = 0;
     bool part1 = false;
     bool part2 = false;
     bool part3 = false;
@@ -28,6 +29,7 @@ public class NewBehaviourScript : MonoBehaviour
         if (transform.position.x < -5.33 & part1 == false)
         {
             transform.position += new Vector3(1 * Time.deltaTime, 0, 0);
+            distanceTraveled += 1 * Time.deltaTime;
         } else
         {
             part1 = true;
@@ -38,6 +40,7 @@ public class NewBehaviourScript : MonoBehaviour
             if (transform.position.y < 3.65 & part2 == false)
             {
                 transform.position += new Vector3(0, 1 * Time.deltaTime, 0);
+                distanceTraveled += 1 * Time.deltaTime;
             } else
             {
                 part2 = true;
@@ -49,6 +52,8 @@ public class NewBehaviourScript : MonoBehaviour
             if (transform.position.x < -2.33 & part3 == false)
             {
                 transform.position += new Vector3(1 * Time.deltaTime, 0.05f *Time.deltaTime, 0);
+                distanceTraveled += 1 * Time.deltaTime;
+                distanceTraveled += 0.05f * Time.deltaTime;
             }
             else
             {
@@ -61,6 +66,8 @@ public class NewBehaviourScript : MonoBehaviour
             if (transform.position.y > -1.68 & part4 == false)
             {
                 transform.position += new Vector3(-0.1f * Time.deltaTime, -1 * Time.deltaTime, 0);
+                distanceTraveled += 0.1f * Time.deltaTime;
+                distanceTraveled += 1 * Time.deltaTime;
             }
             else
             {
@@ -73,6 +80,8 @@ public class NewBehaviourScript : MonoBehaviour
             if (transform.position.x < -0.49 & part5 == false)
             {
                 transform.position += new Vector3(1 * Time.deltaTime, 0.05f * Time.deltaTime, 0);
+                distanceTraveled += 1 * Time.deltaTime;
+                distanceTraveled += 0.05f * Time.deltaTime;
             }
             else
             {
@@ -85,6 +94,8 @@ public class NewBehaviourScript : MonoBehaviour
             if (transform.position.y < 0.88 & part6 == false)
             {
                 transform.position += new Vector3(0.3f * Time.deltaTime, 1 * Time.deltaTime, 0);
+                distanceTraveled += 1 * Time.deltaTime;
+                distanceTraveled += 0.3f * Time.deltaTime;
             }
             else
             {
@@ -96,6 +107,8 @@ public class NewBehaviourScript : MonoBehaviour
             if (transform.position.x < 3.48 & part7 == false)
             {
                 transform.position += new Vector3(1 * Time.deltaTime, 0.1f * Time.deltaTime, 0);
+                distanceTraveled += 1 * Time.deltaTime;
+                distanceTraveled += 0.1f * Time.deltaTime;
             }
             else
             {
