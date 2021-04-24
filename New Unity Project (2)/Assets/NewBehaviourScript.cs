@@ -9,7 +9,6 @@ public class NewBehaviourScript : MonoBehaviour
     {
         // It is also possible to set the position with a Vector2
         // This automatically sets the Z axis to 0
-        transform.position = new Vector2(-8.5f, 0.75f);
         
     }
     public float distanceTraveled = 0;
