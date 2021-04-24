@@ -6,7 +6,6 @@ public class wave : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject Enemy;
-
     // Number of regular red enemies to spawn
     int redSpawn = 10;
     int orangeSpawn = 5;
