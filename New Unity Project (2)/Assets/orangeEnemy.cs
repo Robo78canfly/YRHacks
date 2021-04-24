@@ -1,16 +1,18 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class orangeEnemy : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
         // It is also possible to set the position with a Vector2
         // This automatically sets the Z axis to 0
-        
     }
+    int health = 2;
+    float speed = 1.5f;
+
     public float distanceTraveled = 0;
     bool part1 = false;
     bool part2 = false;
@@ -29,11 +31,16 @@ public class NewBehaviourScript : MonoBehaviour
         // We add +1 to the x axis every frame.
         // Time.deltaTime is the time it took to complete the last frame
         // The result of this is that the object moves one unit on the x axis every second
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
         if (transform.position.x < -5.33 & part1 == false)
         {
-            transform.position += new Vector3(1 * Time.deltaTime, 0, 0);
+            transform.position += new Vector3(1 * Time.deltaTime * speed, 0, 0);
             distanceTraveled += 1 * Time.deltaTime;
-        } else
+        }
+        else
         {
             part1 = true;
         }
@@ -42,9 +49,10 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if (transform.position.y < 3.65 & part2 == false)
             {
-                transform.position += new Vector3(0, 1 * Time.deltaTime, 0);
+                transform.position += new Vector3(0, 1 * Time.deltaTime * speed, 0);
                 distanceTraveled += 1 * Time.deltaTime;
-            } else
+            }
+            else
             {
                 part2 = true;
             }
@@ -54,7 +62,7 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if (transform.position.x < -2.33 & part3 == false)
             {
-                transform.position += new Vector3(1 * Time.deltaTime, 0.05f *Time.deltaTime, 0);
+                transform.position += new Vector3(1 * Time.deltaTime * speed, 0.05f * Time.deltaTime * speed, 0);
                 distanceTraveled += 1 * Time.deltaTime;
                 distanceTraveled += 0.05f * Time.deltaTime;
             }
@@ -68,7 +76,7 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if (transform.position.y > -1.68 & part4 == false)
             {
-                transform.position += new Vector3(-0.1f * Time.deltaTime, -1 * Time.deltaTime, 0);
+                transform.position += new Vector3(-0.1f * Time.deltaTime * speed, -1 * Time.deltaTime * speed, 0);
                 distanceTraveled += 0.1f * Time.deltaTime;
                 distanceTraveled += 1 * Time.deltaTime;
             }
@@ -82,7 +90,7 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if (transform.position.x < -0.49 & part5 == false)
             {
-                transform.position += new Vector3(1 * Time.deltaTime, 0, 0);
+                transform.position += new Vector3(1 * Time.deltaTime * speed, 0, 0);
                 distanceTraveled += 1 * Time.deltaTime;
             }
             else
@@ -95,7 +103,7 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if (transform.position.y < 0.88 & part6 == false)
             {
-                transform.position += new Vector3(0.4f * Time.deltaTime, 1 * Time.deltaTime, 0);
+                transform.position += new Vector3(0.4f * Time.deltaTime * speed, 1 * Time.deltaTime * speed, 0);
                 distanceTraveled += 1 * Time.deltaTime;
                 distanceTraveled += 0.4f * Time.deltaTime;
             }
@@ -108,7 +116,7 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if (transform.position.x < 3.55 & part7 == false)
             {
-                transform.position += new Vector3(1 * Time.deltaTime, 0.1f * Time.deltaTime, 0);
+                transform.position += new Vector3(1 * Time.deltaTime * speed, 0.1f * Time.deltaTime * speed, 0);
                 distanceTraveled += 1 * Time.deltaTime;
                 distanceTraveled += 0.1f * Time.deltaTime;
             }
@@ -121,7 +129,7 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if (transform.position.y < 3.24 & part8 == false)
             {
-                transform.position += new Vector3(-0.1f * Time.deltaTime, 1 * Time.deltaTime, 0);
+                transform.position += new Vector3(-0.1f * Time.deltaTime * speed, 1 * Time.deltaTime * speed, 0);
                 distanceTraveled += 1 * Time.deltaTime;
                 distanceTraveled += 0.1f * Time.deltaTime;
             }
@@ -134,7 +142,7 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if (transform.position.x < 6.35 & part9 == false)
             {
-                transform.position += new Vector3(1 * Time.deltaTime, 0.1f * Time.deltaTime, 0);
+                transform.position += new Vector3(1 * Time.deltaTime * speed, 0.1f * Time.deltaTime * speed, 0);
                 distanceTraveled += 1 * Time.deltaTime;
                 distanceTraveled += 0.1f * Time.deltaTime;
             }
@@ -147,7 +155,7 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if (transform.position.y > 0.68 & part10 == false)
             {
-                transform.position += new Vector3(0.07f * Time.deltaTime, -1 * Time.deltaTime, 0);
+                transform.position += new Vector3(0.07f * Time.deltaTime * speed, -1 * Time.deltaTime * speed, 0);
                 distanceTraveled += 1 * Time.deltaTime;
                 distanceTraveled += 0.07f * Time.deltaTime;
             }
@@ -160,11 +168,13 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if (transform.position.x < 7.78 & part11 == false)
             {
-                transform.position += new Vector3(1 * Time.deltaTime, 0, 0);
+                transform.position += new Vector3(1 * Time.deltaTime * speed, 0, 0);
                 distanceTraveled += 1 * Time.deltaTime;
             }
             else
             {
+                // temporary destroy
+                Destroy(gameObject);
                 part11 = true;
             }
         }

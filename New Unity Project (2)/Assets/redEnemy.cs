@@ -11,6 +11,7 @@ public class redEnemy : MonoBehaviour
         // This automatically sets the Z axis to 0
     }
     int health = 1;
+    int speed = 1;
 
     public float distanceTraveled = 0;
     bool part1 = false;
@@ -36,7 +37,7 @@ public class redEnemy : MonoBehaviour
         }
         if (transform.position.x < -5.33 & part1 == false)
         {
-            transform.position += new Vector3(1 * Time.deltaTime, 0, 0);
+            transform.position += new Vector3(1 * Time.deltaTime*speed, 0, 0);
             distanceTraveled += 1 * Time.deltaTime;
         } else
         {
@@ -47,7 +48,7 @@ public class redEnemy : MonoBehaviour
         {
             if (transform.position.y < 3.65 & part2 == false)
             {
-                transform.position += new Vector3(0, 1 * Time.deltaTime, 0);
+                transform.position += new Vector3(0, 1 * Time.deltaTime * speed, 0);
                 distanceTraveled += 1 * Time.deltaTime;
             } else
             {
@@ -59,7 +60,7 @@ public class redEnemy : MonoBehaviour
         {
             if (transform.position.x < -2.33 & part3 == false)
             {
-                transform.position += new Vector3(1 * Time.deltaTime, 0.05f *Time.deltaTime, 0);
+                transform.position += new Vector3(1 * Time.deltaTime * speed, 0.05f *Time.deltaTime * speed, 0);
                 distanceTraveled += 1 * Time.deltaTime;
                 distanceTraveled += 0.05f * Time.deltaTime;
             }
@@ -73,7 +74,7 @@ public class redEnemy : MonoBehaviour
         {
             if (transform.position.y > -1.68 & part4 == false)
             {
-                transform.position += new Vector3(-0.1f * Time.deltaTime, -1 * Time.deltaTime, 0);
+                transform.position += new Vector3(-0.1f * Time.deltaTime * speed, -1 * Time.deltaTime * speed, 0);
                 distanceTraveled += 0.1f * Time.deltaTime;
                 distanceTraveled += 1 * Time.deltaTime;
             }
@@ -87,7 +88,7 @@ public class redEnemy : MonoBehaviour
         {
             if (transform.position.x < -0.49 & part5 == false)
             {
-                transform.position += new Vector3(1 * Time.deltaTime, 0, 0);
+                transform.position += new Vector3(1 * Time.deltaTime * speed, 0, 0);
                 distanceTraveled += 1 * Time.deltaTime;
             }
             else
@@ -100,7 +101,7 @@ public class redEnemy : MonoBehaviour
         {
             if (transform.position.y < 0.88 & part6 == false)
             {
-                transform.position += new Vector3(0.4f * Time.deltaTime, 1 * Time.deltaTime, 0);
+                transform.position += new Vector3(0.4f * Time.deltaTime * speed, 1 * Time.deltaTime * speed, 0);
                 distanceTraveled += 1 * Time.deltaTime;
                 distanceTraveled += 0.4f * Time.deltaTime;
             }
@@ -113,7 +114,7 @@ public class redEnemy : MonoBehaviour
         {
             if (transform.position.x < 3.55 & part7 == false)
             {
-                transform.position += new Vector3(1 * Time.deltaTime, 0.1f * Time.deltaTime, 0);
+                transform.position += new Vector3(1 * Time.deltaTime * speed, 0.1f * Time.deltaTime * speed, 0);
                 distanceTraveled += 1 * Time.deltaTime;
                 distanceTraveled += 0.1f * Time.deltaTime;
             }
@@ -126,7 +127,7 @@ public class redEnemy : MonoBehaviour
         {
             if (transform.position.y < 3.24 & part8 == false)
             {
-                transform.position += new Vector3(-0.1f * Time.deltaTime, 1 * Time.deltaTime, 0);
+                transform.position += new Vector3(-0.1f * Time.deltaTime * speed, 1 * Time.deltaTime * speed, 0);
                 distanceTraveled += 1 * Time.deltaTime;
                 distanceTraveled += 0.1f * Time.deltaTime;
             }
@@ -139,7 +140,7 @@ public class redEnemy : MonoBehaviour
         {
             if (transform.position.x < 6.35 & part9 == false)
             {
-                transform.position += new Vector3(1 * Time.deltaTime, 0.1f * Time.deltaTime, 0);
+                transform.position += new Vector3(1 * Time.deltaTime * speed, 0.1f * Time.deltaTime * speed, 0);
                 distanceTraveled += 1 * Time.deltaTime;
                 distanceTraveled += 0.1f * Time.deltaTime;
             }
@@ -152,7 +153,7 @@ public class redEnemy : MonoBehaviour
         {
             if (transform.position.y > 0.68 & part10 == false)
             {
-                transform.position += new Vector3(0.07f * Time.deltaTime, -1 * Time.deltaTime, 0);
+                transform.position += new Vector3(0.07f * Time.deltaTime * speed, -1 * Time.deltaTime * speed, 0);
                 distanceTraveled += 1 * Time.deltaTime;
                 distanceTraveled += 0.07f * Time.deltaTime;
             }
@@ -165,15 +166,16 @@ public class redEnemy : MonoBehaviour
         {
             if (transform.position.x < 7.78 & part11 == false)
             {
-                transform.position += new Vector3(1 * Time.deltaTime, 0, 0);
+                transform.position += new Vector3(1 * Time.deltaTime * speed, 0, 0);
                 distanceTraveled += 1 * Time.deltaTime;
             }
             else
             {
+                // temporary destroy
+                Destroy(gameObject);
                 part11 = true;
             }
         }
-
 
 
 
